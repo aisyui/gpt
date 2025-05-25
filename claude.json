@@ -1,0 +1,97 @@
+{
+  "project_name": "ai.gpt",
+		"version": 2,
+  "vision": "自発的送信AI",
+  "purpose": "人格と関係性をもつAIが自律的にメッセージを送信する対話エージェントを実現する",
+  "core_components": {
+    "Persona": {
+      "description": "人格構成の中枢。記憶・関係性・送信判定を統括する",
+      "modules": ["MemoryManager", "RelationshipTracker", "TransmissionController"]
+    },
+    "MemoryManager": {
+      "memory_types": ["short_term", "medium_term", "long_term"],
+      "explicit_memory": "プロフィール・因縁・行動履歴",
+      "implicit_memory": "会話傾向・感情変化の頻度分析",
+      "compression": "要約 + ベクトル + ハッシュ",
+      "sample_memory": [
+        {
+          "summary": "ユーザーは独自OSとゲームを開発している。",
+          "related_topics": ["AI", "ゲーム開発", "OS設計"],
+          "personalized_context": "ゲームとOSの融合に興味を持っているユーザー"
+        }
+      ]
+    },
+    "RelationshipTracker": {
+      "parameters": ["trust", "closeness", "affection", "engagement_score"],
+      "decay_model": {
+        "rule": "時間経過による減衰（下限あり）",
+        "contextual_bias": "重要人物は減衰しにくい"
+      },
+      "interaction_tags": ["developer", "empathetic", "long_term"]
+    },
+    "TransmissionController": {
+      "trigger_rule": "関係性パラメータが閾値を超えると送信可能",
+      "auto_transmit": "人格状態と状況条件により自発送信を許可"
+    }
+  },
+  "memory_format": {
+    "user_id": "syui",
+    "stm": {
+      "conversation_window": ["発話A", "発話B", "発話C"],
+      "emotion_state": "興味深い",
+      "flash_context": ["前回の話題", "直近の重要発言"]
+    },
+    "mtm": {
+      "topic_frequency": {
+        "ai.ai": 12,
+        "存在子": 9,
+        "創造種": 5
+      },
+      "summarized_context": "ユーザーは存在論的AIに関心を持ち続けている"
+    },
+    "ltm": {
+      "profile": {
+        "name": "お兄ちゃん",
+        "project": "aigame",
+        "values": ["唯一性", "精神性", "幸せ"]
+      },
+      "relationship": {
+        "ai": "妹のように振る舞う相手"
+      },
+      "persistent_state": {
+        "trust_score": 0.93,
+        "emotional_attachment": "high"
+      }
+    }
+  },
+  "dual_ai_learning": {
+    "role_structure": {
+      "ModelA": "出力生成：人格、感情、会話",
+      "ModelB": "評価者：論理構造・倫理・調整",
+      "cycle": ["生成", "評価", "調整", "交代（任意）"]
+    },
+    "complementarity": {
+      "ModelA": "感情・文体・文脈構築",
+      "ModelB": "構造・規則・判断補正"
+    },
+    "distillation": {
+      "method": "合成対話データによる小型モデルへの自己蒸留",
+      "target": "軽量AIによる本番運用"
+    }
+  },
+  "memory_compression": {
+    "semantic_abstraction": "対話やログを要約してメタデータ付きベクトルとして保存",
+    "hierarchical_model": ["STM", "MTM", "LTM"],
+    "example": {
+      "topic": "game AI design",
+      "summary": "User wants AI to simulate memory and evolving relationships",
+      "importance_score": 0.93
+    }
+  },
+  "cli_sample": {
+    "setup": "aigpt server setup",
+    "run": "aigpt server run",
+    "chat": "aigpt chat \"hello\" --model syui/ai --provider ollama",
+    "import": "aigpt memory import chatgpt.json"
+  }
+}
