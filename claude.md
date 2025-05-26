@@ -227,9 +227,6 @@ Example memory:
 	•	中期記憶（MTM）：繰り返し登場する話題、圧縮された文脈保持
 	•	長期記憶（LTM）：信頼・関係・背景知識、恒久的な人格情報
 
-
-
-
 ### 2.3 選択的記憶保持戦略（Selective Retention Strategy）
 	•	重要度評価（Importance Score）
 	•	希少性・再利用頻度による重み付け
